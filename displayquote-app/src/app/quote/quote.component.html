@@ -1,0 +1,23 @@
+<div class="form-container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="quote">Quote:</label>
+      <input
+        type="text"
+        id="quote"
+        formControlName="quote"
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+<div>
+  <h2 *ngIf = quoteResult>Result:</h2>
+  <div *ngFor="let quotes of quoteResult">
+    <ul>
+    <li>{{ quotes.content }}</li>
+  </ul>
+  </div>
+</div>
