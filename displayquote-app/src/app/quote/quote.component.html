@@ -15,9 +15,9 @@
 </div>
 <div>
   <h2 *ngIf = quoteResult>Result:</h2>
-  <div *ngFor="let quotes of quoteResult">
-    <ul>
-    <li>{{ quotes.content }}</li>
+  <div  *ngIf = quoteResult>
+    <ul *ngFor="let result of quoteResult.results">
+    <li>{{ result.content }}</li>
   </ul>
   </div>
 </div>
